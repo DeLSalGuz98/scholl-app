@@ -4,6 +4,7 @@
     height: calc(100% + 3em);
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .profile{
     background-color: var(--black);

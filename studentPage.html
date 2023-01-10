@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School | teacher</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <h1 class="header--title"><a class="text-white" href="/index.html"><i class="fa-solid fa-school"></i> School</a></h1>
+        <nav>
+            <ul class="nav">
+                <li><a class="nav-item text-white" href="/signin.html"><i class="fa-solid fa-door-open"></i> Sign out</a></li>
+                <li><a class="nav-item text-white" href="/signup.html"><i class="fa-solid fa-chalkboard-user"></i> Denil Salas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="app">
+        <div class="container">
+            <div class="profile">
+                <div class="user">
+                    <img class="user-img" src="/assets/teacher.jpg" alt="foto-teacher">
+                    <p class="user-name text-white">Denilson Salas</p>
+                </div>
+                <input class="btn btn-blue" type="button" value="Get Premium Count">
+                
+            </div>
+            <div class="courses">
+                <div class="card">
+                    <p class="card-title">Html</p>
+                    <img class="card-img" src="./assets/html.png" alt="foto-course">
+                    <div class="card-description">
+                        <p class="text">Clases: 10</p>
+                        <input class="btn btn-green" type="button" value="Ver Detalles">
+                    </div>
+                </div>
+            </div>
+            <div class="overScreen">
+                <div class="courseDetail radius-10">
+                    <a class="close" href="#"><i class="fa-solid fa-xmark"></i></a>
+                    <div class="courseDetail-container">
+                        <div class="courseDetail-one">
+                            <img class="courseDetail-img" src="/assets/html.png" alt="course-foto">
+                            <p class="courseDetail-name">Html</p>
+                            <div class="courseDetail-text">
+                                <p>Clases: 10</p>
+                                <p>Free</p>
+                            </div>
+                        </div>
+                        <div class="courseDetail-two">
+                            <div class="enrolled">
+                                <p>Enrolled List</p>
+                                <ul class="enrolled-list">
+                                    <li class="enrolled-item radius-5">Julian<i class="fa-solid fa-graduation-cap"></i>
+                                    </li> 
+                                </ul>
+                            </div>
+                            <input class="btn btn-green" type="button" value="Enroll">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./scripts/index.js"></script>
+</body>
+</html>
