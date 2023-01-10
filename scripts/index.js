@@ -10,14 +10,14 @@ const lastName = document.getElementById('lastName');
 const email = document.getElementById('email');
 const userName = document.getElementById('userName');
 
-const denil = new Teacher("Denil", "Salas", "dlsg@gmail.com", "dlsg");
+// const denil = new Teacher("Denil", "Salas", "dlsg@gmail.com", "dlsg");
 
-denil.CreateCourse({nameCourse:"html", quantityClasses: 10});
-denil.CreateCourse({nameCourse:"css", quantityClasses: 18});
-console.log(denil);
-console.log(ListOfCourses);
-const mikha = new Student("Mikha", "Salas", "msg@gmail.com", "m2sg");
-mikha.enrollCourse('html')
+// denil.CreateCourse({nameCourse:"html", quantityClasses: 10});
+// denil.CreateCourse({nameCourse:"css", quantityClasses: 18});
+// console.log(denil);
+// console.log(ListOfCourses);
+// const mikha = new Student("Mikha", "Salas", "msg@gmail.com", "m2sg");
+// mikha.enrollCourse('html')
 
 //get data user register
 form.addEventListener('submit', (e)=>{

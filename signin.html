@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School</title>
+    <title>School | sign in</title>
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -19,6 +19,23 @@
         </nav>
     </header>
     <div class="app">
+        <form class="form radius-10" id="form">
+            <h3 class="form-title">Wellcome Again</h3>
+            <div class="form-elements">
+                <div class="input">
+                    <label class="input-title" form="userName">User Name:</label>
+                    <input class="input-text" id="userName" name="userName" type="text" required>
+                </div>
+                <div class="input">
+                    <label class="input-title" form="email">Email:</label>
+                    <input class="input-text" id="email" name="email" type="email" required>
+                </div>
+                <input class=" btn btn-green" type="submit" value="Sign up">
+            </div>
+        </form>
+    </div>
+    <div>
+
     </div>
     <script type="module" src="./scripts/index.js"></script>
 </body>

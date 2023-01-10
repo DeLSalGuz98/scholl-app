@@ -1,0 +1,39 @@
+.btn{
+    border: none;
+    width: 100%;
+    padding: .8em 0;
+    margin-top: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+/*green*/
+.btn-green{
+    background-color: var(--green);
+    color: var(--black);
+}
+.btn-green:hover{
+    background-color: var(--dark-green);
+    color: var(--white);
+}
+/*red*/
+.btn-red{
+    background-color: var(--red);
+    color: var(--white);
+}
+.btn-red:hover{
+    background-color: var(--dark-red);
+}
+/*blue*/
+.btn-blue{
+    background-color: var(--blue);
+    color: var(--white);
+}
+.btn-blue:hover{
+    background-color: var(--dark-blue);
+}

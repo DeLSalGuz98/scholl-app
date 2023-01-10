@@ -1,0 +1,34 @@
+.card{
+    margin: 0 .5em;
+    font-size: 16px;
+    width: 15em;
+    min-width: 15em;
+    height: fit-content;
+    background-color: var(--white);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding-bottom: .5em;
+    box-shadow: 0 0 1em 3px var(--black);
+}
+.card-title{
+    line-height: 1.5em;
+    padding-left: .5em;
+    font-size: 1.5em;
+}
+.card-img{
+    width: 100%;
+    height: calc(15em - 5em);
+}
+.card-description{
+    height: 5.5em;
+    padding: 0 1em;
+}
+@media (min-width:1024px) {
+    .card{
+        font-size: 20px;
+        margin-left: 2em;
+    }
+}
