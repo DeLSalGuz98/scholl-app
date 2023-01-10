@@ -1,5 +1,6 @@
 import { User } from "./User.js";
 import { Course } from "./Course.js";
+import { ListOfCourses } from "../DB/listArrays.js";
 
 export class Teacher extends User{
     /**
@@ -11,11 +12,11 @@ export class Teacher extends User{
      * @param courses - an array of courses
      */
     constructor(name, lastName, email, userName){
-        super(name, lastName, email, userName)
-        this.courses = []
+        super(name, lastName, email, userName),
+        this.courses = ListOfCourses
     }
     getCourses(){
-        return this.cousers
+        return this.cousers;
     }
     /**
      * Create a new course object, add it to the courses array, and return the new course object.
@@ -23,7 +24,7 @@ export class Teacher extends User{
      * @param quantityClasses - number of classes 
      */
     CreateCourse({nameCourse, quantityClasses}){
-        const newCourse = new Course(nameCourse, this.name, quantityClasses)
-        this.courses.push(newCourse)
+        const newCourse = new Course(nameCourse, this.name, quantityClasses);
+        ListOfCourses.push(newCourse);
     }
 }

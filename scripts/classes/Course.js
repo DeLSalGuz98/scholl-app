@@ -14,34 +14,34 @@ export class Course{
     }
     //name
     getName(){
-        return this.name
+        return this.name;
     }
     setName(name){
-        this.name = name
+        this.name = name;
     }
     //teacher
     getTeacher(){
-        return this.teacher
+        return this.teacher;
     }
     setTeacher(teacher){
-        this.teacher = teacher
+        this.teacher = teacher;
     }
     //quantityClasses
     getQuantityClasses(){
-        return this.quantityClasses
+        return this.quantityClasses;
     }
     setQuantityClasses(number){
-        this.getQuantityClasses = number
+        this.getQuantityClasses = number;
     }
     //enrolled
     getEnrolled(){
-        return this.enrolled
+        return this.enrolled;
     }
     /**
      * The function takes a student object as an argument and pushes it into the enrolled array.
      * @param student - The student object to be added to the enrolled array.
      */
     setEnrolled(student){
-        this.enrolled.push(student)
+        this.enrolled.push(student);
     }
 }
