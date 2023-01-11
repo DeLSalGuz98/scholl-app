@@ -11,6 +11,7 @@ export class Student extends User{
      */
     constructor(name, lastName, email, userName){
         super(name, lastName, email, userName),
+        this.tag = 'student'
         this.category = 'free'
     }
     getCategory(){
@@ -35,5 +36,20 @@ export class Student extends User{
                 course.setEnrolled(this.name)
             }
         });
+    }
+    SaveStudent(){
+        const userData = {
+            name: this.name,
+            lastName: this.lastName,
+            email: this.email,
+            userName: this.userName,
+            tag: this.tag
+        }
+        axios({
+            method: 'post',
+            url: 'http://localhost:3000/Users',
+            data: userData
+        })
+        .then(res => console.log(res));
     }
 }

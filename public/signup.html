@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School | sign up</title>
-    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <header class="header">
-        <h1 class="header--title"><a class="text-white" href="/index.html"><i class="fa-solid fa-school"></i> School</a></h1>
+        <h1 class="header--title"><a class="text-white" href="./index.html"><i class="fa-solid fa-school"></i> School</a></h1>
         <nav>
             <ul class="nav">
-                <li><a class="nav-item text-white" href="/signin.html"><i class="fa-solid fa-right-to-bracket"></i> Sign in</a></li>
-                <li><a class="nav-item text-white" href="/signup.html"><i class="fa-solid fa-user-plus"></i> Sign up</a></li>
+                <li><a class="nav-item text-white" href="./signin.html"><i class="fa-solid fa-right-to-bracket"></i> Sign in</a></li>
+                <li><a class="nav-item text-white" href="./signup.html"><i class="fa-solid fa-user-plus"></i> Sign up</a></li>
             </ul>
         </nav>
     </header>
@@ -45,7 +46,7 @@
                     <label class="input-title" form="email">Email:</label>
                     <input class="input-text" id="email" name="email" type="email" required>
                 </div>
-                <input class=" btn btn-green" type="submit" value="Sign up">
+                <input class=" btn btn-green" id="btnSubmit" type="submit" value="Sign up">
             </div>
         </form>
     </div>

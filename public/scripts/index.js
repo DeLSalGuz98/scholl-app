@@ -9,6 +9,7 @@ const name = document.getElementById('name');
 const lastName = document.getElementById('lastName');
 const email = document.getElementById('email');
 const userName = document.getElementById('userName');
+const btnSubmit = document.getElementById('btnSubmit')
 
 // const denil = new Teacher("Denil", "Salas", "dlsg@gmail.com", "dlsg");
 
@@ -27,8 +28,7 @@ form.addEventListener('submit', (e)=>{
     lastName.value = ''; 
     email.value = '';
     userName.value = '';
-    console.log(ListOfTeacher)
-    console.log(ListOfStudents)
+    console.log('todo ok')
 })
 
 //Register new teachers 
@@ -45,10 +45,12 @@ form.addEventListener('submit', (e)=>{
 function NewUser(typeUser, name, lastName, email, userName) {
     if(typeUser == 'teacher'){
         const newTeacher = new Teacher(name, lastName, email, userName)
-        ListOfTeacher.push(newTeacher);
+        newTeacher.SaveTeacher();
+        location.href = 'http://127.0.0.1:5500/public/signin.html';
     }else{
         const newStudent = new Student(name, lastName, email, userName)
-        ListOfStudents.push(newStudent)
+        newStudent.SaveStudent();
+        location.href = 'http://127.0.0.1:5500/public/signin.html';
     }
 }
 

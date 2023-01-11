@@ -13,6 +13,7 @@ export class Teacher extends User{
      */
     constructor(name, lastName, email, userName){
         super(name, lastName, email, userName),
+        this.tag = 'teacher'
         this.courses = ListOfCourses
     }
     getCourses(){
@@ -27,4 +28,23 @@ export class Teacher extends User{
         const newCourse = new Course(nameCourse, this.name, quantityClasses);
         ListOfCourses.push(newCourse);
     }
-}
+    /**
+     * It's a function that sends a POST request to the server with the data that the user has entered
+     * in the form.
+     */
+    SaveTeacher(){
+        const userData = {
+            name: this.name,
+            lastName: this.lastName,
+            email: this.email,
+            userName: this.userName,
+            tag: this.tag
+        }
+        axios({
+            method: 'post',
+            url: 'http://localhost:3000/Users',
+            data: userData
+        })
+        .then(res => console.log(res));
+    }
+}   

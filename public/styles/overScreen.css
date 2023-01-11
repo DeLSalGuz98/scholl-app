@@ -1,3 +1,6 @@
+.remove{
+    display: none;
+}
 .overScreen{
     display: flex; /*none and flex*/
     position: absolute;
