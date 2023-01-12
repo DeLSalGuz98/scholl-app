@@ -1,6 +1,5 @@
 import { User } from "./User.js";
 import { Course } from "./Course.js";
-import { ListOfCourses } from "../DB/listArrays.js";
 
 export class Teacher extends User{
     /**
@@ -14,7 +13,7 @@ export class Teacher extends User{
     constructor(name, lastName, email, userName){
         super(name, lastName, email, userName),
         this.tag = 'teacher'
-        this.courses = ListOfCourses
+        this.courses = []
     }
     getCourses(){
         return this.cousers;
@@ -24,9 +23,10 @@ export class Teacher extends User{
      * @param nameCourse - The name of the course
      * @param quantityClasses - number of classes 
      */
-    CreateCourse({nameCourse, quantityClasses}){
-        const newCourse = new Course(nameCourse, this.name, quantityClasses);
-        ListOfCourses.push(newCourse);
+    CreateCourse({nameCourse, quantityClasses, imageCourse}){
+        const newCourse = new Course(nameCourse, this.name, quantityClasses, imageCourse);
+        newCourse.SaveCourse();
+        // ListOfCourses.push(newCourse);
     }
     /**
      * It's a function that sends a POST request to the server with the data that the user has entered
@@ -42,9 +42,14 @@ export class Teacher extends User{
         }
         axios({
             method: 'post',
-            url: 'http://localhost:3000/Users',
+            url: 'http://127.0.0.1:3000/Users',
             data: userData
         })
-        .then(res => console.log(res));
+        .then(res =>{
+            localStorage.setItem('idUser', res.data.id)
+        })
+        // .then(data =>{
+        //     console.log(data)
+        // })
     }
 }   

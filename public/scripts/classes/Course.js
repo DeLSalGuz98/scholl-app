@@ -4,12 +4,13 @@ export class Course{
      * @param name - type: string - The name of the course
      * @param teacher - type: string - the name of the teacher
      * @param quantityClasses - type: int - The number of classes that the course has.
-     * @param enrolled - type: object - recive a student object
+     * @param imageCourse - type: string - The url of course reference image.
      */
-    constructor(name, teacher, quantityClasses){
+    constructor(name, teacher, quantityClasses, imageCourse){
         this.name = name,
         this.teacher = teacher,
         this.quantityClasses = quantityClasses,
+        this.imageCourse = imageCourse
         this.enrolled = []
     }
     //name
@@ -40,8 +41,35 @@ export class Course{
     /**
      * The function takes a student object as an argument and pushes it into the enrolled array.
      * @param student - The student object to be added to the enrolled array.
-     */
+    */
     setEnrolled(student){
         this.enrolled.push(student);
+    }
+    SaveCourse(){
+        axios({
+            method: 'post',
+            url: 'http://localhost:3000/Courses',
+            data: {
+                    name: this.name,
+                    teacher: this.teacher,
+                    classes: this.quantityClasses,
+                    imageCourse: this.imageCourse
+                }
+        })
+        // fetch('http://localhost:3000/Courses',{
+        //     method: 'POST',
+        //     body: JSON.stringify({
+        //         name: this.name,
+        //         teacher: this.teacher,
+        //         classes: this.quantityClasses,
+        //         imageCourse: this.imageCourse
+        //     }),
+        //     headers: {
+        //         'Accept': 'appiclation/json',
+        //         'Content-Type': 'application/json'
+        //     }
+        // })
+        // .then(res => res.json())
+        // .then(data => console.log(data))
     }
 }

@@ -1,7 +1,5 @@
 import { Student } from "./classes/Student.js";
 import { Teacher } from "./classes/Teacher.js";
-import { ListOfTeacher, ListOfStudents, ListOfCourses } from "./DB/listArrays.js";
-// const listOfTeacher = [];
 
 const form = document.getElementById('form');
 const typeUser = document.getElementById('typeUser');
@@ -9,16 +7,6 @@ const name = document.getElementById('name');
 const lastName = document.getElementById('lastName');
 const email = document.getElementById('email');
 const userName = document.getElementById('userName');
-const btnSubmit = document.getElementById('btnSubmit')
-
-// const denil = new Teacher("Denil", "Salas", "dlsg@gmail.com", "dlsg");
-
-// denil.CreateCourse({nameCourse:"html", quantityClasses: 10});
-// denil.CreateCourse({nameCourse:"css", quantityClasses: 18});
-// console.log(denil);
-// console.log(ListOfCourses);
-// const mikha = new Student("Mikha", "Salas", "msg@gmail.com", "m2sg");
-// mikha.enrollCourse('html')
 
 //get data user register
 form.addEventListener('submit', (e)=>{
@@ -28,7 +16,6 @@ form.addEventListener('submit', (e)=>{
     lastName.value = ''; 
     email.value = '';
     userName.value = '';
-    console.log('todo ok')
 })
 
 //Register new teachers 
@@ -46,7 +33,7 @@ function NewUser(typeUser, name, lastName, email, userName) {
     if(typeUser == 'teacher'){
         const newTeacher = new Teacher(name, lastName, email, userName)
         newTeacher.SaveTeacher();
-        location.href = 'http://127.0.0.1:5500/public/signin.html';
+        location.href = 'http://127.0.0.1:5500/public/teacherPage.html';
     }else{
         const newStudent = new Student(name, lastName, email, userName)
         newStudent.SaveStudent();

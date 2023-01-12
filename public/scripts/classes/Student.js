@@ -1,5 +1,4 @@
 import { User } from "./User.js";
-import { ListOfCourses } from "../DB/listArrays.js";
 
 export class Student extends User{
     /**
@@ -31,11 +30,11 @@ export class Student extends User{
      * @param nameCourse - The name of the course you want to enroll in.
      */
     enrollCourse(nameCourse){
-        ListOfCourses.map((course)=>{
-            if(course.name == nameCourse){
-                course.setEnrolled(this.name)
-            }
-        });
+        // ListOfCourses.map((course)=>{
+        //     if(course.name == nameCourse){
+        //         course.setEnrolled(this.name)
+        //     }
+        // });
     }
     SaveStudent(){
         const userData = {
