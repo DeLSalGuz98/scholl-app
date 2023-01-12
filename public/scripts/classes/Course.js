@@ -53,7 +53,8 @@ export class Course{
                     name: this.name,
                     teacher: this.teacher,
                     classes: this.quantityClasses,
-                    imageCourse: this.imageCourse
+                    imageCourse: this.imageCourse,
+                    enrolled: this.enrolled
                 }
         })
         // fetch('http://localhost:3000/Courses',{

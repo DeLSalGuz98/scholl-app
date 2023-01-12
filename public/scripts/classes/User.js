@@ -6,12 +6,16 @@ export class User{
      * @param lastName - String
      * @param email - the email of the user
      * @param userName - The user name of the user.
+     * @param statusCount - The user is logged or not
+     * @param password - The user password
      */
-    constructor(name, lastName, email, userName){
+    constructor(name, lastName, email, userName, statusCount, password){
         this.name = name,
         this.lastName = lastName,
         this.email = email,
-        this.userName = userName
+        this.userName = userName,
+        this.statusCount = statusCount
+        this.password = password
     }
     // name
     getName(){
@@ -38,7 +42,21 @@ export class User{
     getUserName(){
         return this.userName;
     }
-    setUSerName(userName){
+    setUserName(userName){
         this.userName = userName;
+    }
+    //statusCount
+    getStatusCount(){
+        return this.statusCount;
+    }
+    setStatusCount(status){
+        this.statusCount = status;
+    }
+    // username
+    getPassword(){
+        return this.password;
+    }
+    setPassword(password){
+        this.password = password;
     }
 }

@@ -6,8 +6,36 @@
       "email": "juan@gmail",
       "userName": "j25perez",
       "tag": "teacher",
+      "statusCount": "isLooged",
+      "password": "123",
       "id": 1
+    },
+    {
+      "name": "Denilson",
+      "lastName": "Salas",
+      "email": "dlsg@gmail",
+      "userName": "dlsg",
+      "tag": "teacher",
+      "statusCount": "isLooged",
+      "password": "123",
+      "id": 2
     }
   ],
-  "Courses": []
+  "Courses": [
+    {
+      "name": "JavaScript",
+      "teacher": "Juan",
+      "classes": "13",
+      "imageCourse": "https://cardbiss.com/wp-content/uploads/2022/12/logo-curso-introduccion-programacion-js.jpg",
+      "id": 1
+    },
+    {
+      "name": "GO",
+      "teacher": "Juan",
+      "classes": "14",
+      "imageCourse": "https://oregoom.com/wp-content/uploads/2020/05/go.jpg",
+      "enrolled": [],
+      "id": 2
+    }
+  ]
 }

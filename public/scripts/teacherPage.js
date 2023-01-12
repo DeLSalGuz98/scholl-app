@@ -11,21 +11,45 @@ const nameCourse = document.getElementById('nameCourse');
 const numberClasses = document.getElementById('numberClasses')
 const imageCourse = document.getElementById('imageCourse')
 const cancel = document.getElementById('cancel');
-const coursesContainer = document.getElementById('coursesContainer');
+// const coursesContainer = document.getElementById('coursesContainer');
+const signOut = document.getElementById('signOut');
+
+UserIsLooged();
+
+function UserIsLooged(){
+    const islogged = localStorage.getItem('statusCount');
+    const idUser = parseInt(localStorage.getItem('idUser'));
+    if(islogged == 'isLooged'){
+        GetUserData(idUser)
+    }
+    else{
+        location.href = 'http://127.0.0.1:5500/public/signin.html'
+    }
+}
 
 /**
  * It gets the user data from the database and then sets it in the local storage.
  */
-function GetUserData() {
-    axios.get(`http://localhost:3000/Users/${localStorage.getItem('idUser')}`)
+function GetUserData(idUser) {
+    axios.get(`http://127.0.0.1:3000/Users/${idUser}`)
     .then(res =>{
-            return teacher = new Teacher(res.data.name, res.data.lastName, res.data.email, res.data.userName)
-    }).then(data =>{
+        const dataUser = {
+            name: res.data.name,
+            lastName: res.data.lastName,
+            email: res.data.email,
+            userName: res.data.userName,
+            statusCount: res.data.statusCount,
+            password: res.data.password
+        }
+        teacher = new Teacher(dataUser);
+        // teacher.setCourses();
+        return teacher
+    })
+    .then(data =>{
         SetDataUser(data);
         CreateCardCourse();
     })
 }
-GetUserData();
 
 /**
  * SetDataUser is a function that takes a user object as an argument and sets the innerHTML of the
@@ -83,3 +107,12 @@ function CreateCardCourse() {
         });
     })
 }
+
+//signout
+
+signOut.addEventListener('click', (e)=>{
+    e.preventDefault();
+    localStorage.setItem('statusCount', 'isUnlogged');
+    localStorage.removeItem(idUser);
+    location.reload();
+});

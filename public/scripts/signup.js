@@ -7,15 +7,24 @@ const name = document.getElementById('name');
 const lastName = document.getElementById('lastName');
 const email = document.getElementById('email');
 const userName = document.getElementById('userName');
+const pass = document.getElementById('pass');
 
 //get data user register
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
-    NewUser(typeUser.value, name.value, lastName.value, email.value, userName.value);
+    NewUser(
+        typeUser.value, 
+        name.value, 
+        lastName.value, 
+        email.value, 
+        userName.value,
+        pass.value
+    );
     name.value = '';
     lastName.value = ''; 
     email.value = '';
     userName.value = '';
+    pass.value = '';
 })
 
 //Register new teachers 
@@ -29,11 +38,18 @@ form.addEventListener('submit', (e)=>{
  * @param userName - string
  * @param studentCategory - 'student' or 'teacher'
  */
-function NewUser(typeUser, name, lastName, email, userName) {
+function NewUser(typeUser, name, lastName, email, userName, password) {
+    const dataUser = {
+        name: name, 
+        lastName: lastName, 
+        email: email, 
+        userName: userName, 
+        statusCount: 'isLooged', 
+        password: password
+    }
     if(typeUser == 'teacher'){
-        const newTeacher = new Teacher(name, lastName, email, userName)
+        const newTeacher = new Teacher(dataUser)
         newTeacher.SaveTeacher();
-        location.href = 'http://127.0.0.1:5500/public/teacherPage.html';
     }else{
         const newStudent = new Student(name, lastName, email, userName)
         newStudent.SaveStudent();
