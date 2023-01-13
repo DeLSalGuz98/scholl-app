@@ -11,6 +11,7 @@ const overScreen = document.getElementById('overScreen');
 const close = document.getElementById('close');
 const detailContainer = document.getElementById('detailContainer');
 const signOut = document.getElementById('signOut');
+const getPremium = document.getElementById('getPremium');
 
 UserIsLooged();
 
@@ -38,7 +39,10 @@ function getDataUser(idUser) {
             password: res.data.password
         }
         user = new Student(dataUser);
-        setDataUser(user)
+        setDataUser(user)        
+    })
+    .catch(err=>{
+            console.log(err)
     })
 }
 
@@ -151,4 +155,8 @@ signOut.addEventListener('click', (e)=>{
     localStorage.setItem('statusCount', 'isUnlogged');
     localStorage.removeItem('idUser');
     location.reload();
+});
+
+getPremium.addEventListener('click',()=>{
+    alert("doesn't exist premium courses, so enjoy your free count");
 });

@@ -1,5 +1,6 @@
 import { Student } from "./classes/Student.js";
 import { Teacher } from "./classes/Teacher.js";
+import { EncryptPass } from "./encryptPass.js";
 
 const form = document.getElementById('form');
 const typeUser = document.getElementById('typeUser');
@@ -45,10 +46,10 @@ function NewUser(typeUser, name, lastName, email, userName, password) {
         email: email, 
         userName: userName, 
         statusCount: 'isLooged', 
-        password: password
+        password: EncryptPass(password)
     }
     if(typeUser == 'teacher'){
-        const newTeacher = new Teacher(dataUser)
+        const newTeacher = new Teacher(null,dataUser)
         newTeacher.SaveTeacher();
     }else{
         const newStudent = new Student(dataUser)

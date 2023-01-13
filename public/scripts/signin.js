@@ -1,3 +1,4 @@
+import { DecryptPass } from "./encryptPass.js";
 const url = 'http://localhost:3000/Teachers?q=m2sg';
 
 const form = document.getElementById('form');
@@ -12,10 +13,14 @@ form.addEventListener('submit', (e)=>{
     }
     axios.get(`http://localhost:3000/Users?q=${user.userName}`)
     .then(({data}) =>{
-        if(data.length > 0 && user.pass === data[0].password){
+        if(data.length > 0 && DecryptPass(pass.value, data[0].password)){
             localStorage.setItem('idUser', data[0].id)
             localStorage.setItem('statusCount', data[0].statusCount)
-            location.href = 'http://127.0.0.1:5500/public/teacherPage.html';
+            if(data[0].tag == 'teacher'){
+                location.href = 'http://127.0.0.1:5500/public/teacherPage.html'
+            }else{
+                location.href = 'http://127.0.0.1:5500/public/studentPage.html'
+            }
         }else{
             alert('error on credentials');
             location.reload();
@@ -25,6 +30,6 @@ form.addEventListener('submit', (e)=>{
         //     location.href = 'http://127.0.0.1:5500/public/teacherPage.html'
         // }else{
         //     location.href = 'http://127.0.0.1:5500/public/studentPage.html'
-        // }
+        // }  user.pass === data[0].password
     });
 });

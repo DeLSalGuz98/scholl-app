@@ -6,8 +6,9 @@ export class Teacher extends User{
      * The constructor function is a method that is called automatically when a new instance of a class
      * is created.
      */
-    constructor({name, lastName, email, userName, statusCount, password}){
+    constructor(id,{name, lastName, email, userName, statusCount, password},){
         super(name, lastName, email, userName, statusCount, password),
+        this.id = id
         this.tag = 'teacher'
     }
     /**
@@ -16,7 +17,7 @@ export class Teacher extends User{
      * @param quantityClasses - number of classes 
      */
     CreateCourse({nameCourse, quantityClasses, imageCourse}){
-        const newCourse = new Course(nameCourse, this.name, quantityClasses, imageCourse, []);
+        const newCourse = new Course(null,nameCourse, this.name, quantityClasses, imageCourse, []);
         newCourse.SaveCourse();
     }
     /**

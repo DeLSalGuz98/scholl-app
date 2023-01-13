@@ -41,13 +41,14 @@ function GetUserData(idUser) {
             statusCount: res.data.statusCount,
             password: res.data.password
         }
-        teacher = new Teacher(dataUser);
+        teacher = new Teacher(res.data.id, dataUser);
         // teacher.setCourses();
         return teacher
     })
     .then(data =>{
+        createListCourses();
         SetDataUser(data);
-        CreateCardCourse();
+        // CreateCardCourse();
     })
 }
 
@@ -78,7 +79,7 @@ form.addEventListener('submit', (e)=>{
         imageCourse: imageCourse.value
     }
     teacher.CreateCourse(course);
-    CreateCardCourse();
+    // CreateCardCourse();
     overScreen.classList.remove('overScreen');
     overScreen.classList.add('remove');
 })
@@ -88,7 +89,7 @@ cancel.addEventListener('click', ()=>{
     overScreen.classList.add('remove');
 });
 
-function CreateCardCourse() {
+function createListCourses() {
     axios.get(`http://localhost:3000/Courses?q=${teacher.getName()}`)
     .then(res => res.data)
     .then(data =>{
@@ -99,14 +100,35 @@ function CreateCardCourse() {
                     <img class="card-img" src="${course.imageCourse}" alt="foto-course">
                     <div class="card-description">
                         <p class="text">Clases: ${course.classes}</p>
-                        <input class="btn btn-green" type="button" value="Ver Detalles">
+                        <p class="text">Enrolled: ${course.enrolled.length}</p>
                     </div>
                 </div>
             `
             coursesContainer.innerHTML += card
-        });
+        })
     })
 }
+
+// function CreateCardCourse() {
+//     axios.get(`http://localhost:3000/Courses?q=${teacher.getName()}`)
+//     .then(res => res.data)
+//     .then(data =>{
+//         data.map((course)=>{
+//             const card = `
+//                 <div class="card">
+//                     <p class="card-title">${course.name}</p>
+//                     <img class="card-img" src="${course.imageCourse}" alt="foto-course">
+//                     <div class="card-description">
+//                         <p class="text">Clases: ${course.classes}</p>
+//                         <p class="text">Enrolled: ${course.classes}</p>
+//                         <input class="btn btn-green" type="button" value="Ver Detalles">
+//                     </div>
+//                 </div>
+//             `
+//             coursesContainer.innerHTML += card
+//         });
+//     })
+// }
 
 //signout
 
