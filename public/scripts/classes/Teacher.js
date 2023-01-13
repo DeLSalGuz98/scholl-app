@@ -16,7 +16,7 @@ export class Teacher extends User{
      * @param quantityClasses - number of classes 
      */
     CreateCourse({nameCourse, quantityClasses, imageCourse}){
-        const newCourse = new Course(nameCourse, this.name, quantityClasses, imageCourse);
+        const newCourse = new Course(nameCourse, this.name, quantityClasses, imageCourse, []);
         newCourse.SaveCourse();
     }
     /**

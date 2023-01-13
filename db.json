@@ -29,6 +29,16 @@
       "statusCount": "isLooged",
       "password": "123",
       "id": 3
+    },
+    {
+      "name": "Pedro",
+      "lastName": "Gutierrez",
+      "email": "pegu@gmail",
+      "userName": "pegu",
+      "tag": "student",
+      "statusCount": "isLooged",
+      "password": "123",
+      "id": 4
     }
   ],
   "Courses": [
@@ -37,6 +47,11 @@
       "teacher": "Juan",
       "classes": "13",
       "imageCourse": "https://cardbiss.com/wp-content/uploads/2022/12/logo-curso-introduccion-programacion-js.jpg",
+      "enrolled": [
+        {
+          "name": "Pedro"
+        }
+      ],
       "id": 1
     },
     {
@@ -44,7 +59,14 @@
       "teacher": "Juan",
       "classes": "14",
       "imageCourse": "https://oregoom.com/wp-content/uploads/2020/05/go.jpg",
-      "enrolled": [],
+      "enrolled": [
+        {
+          "name": "Mikhail"
+        },
+        {
+          "name": "Pedro"
+        }
+      ],
       "id": 2
     },
     {
@@ -52,7 +74,11 @@
       "teacher": "Denilson",
       "classes": "15",
       "imageCourse": "https://i.ytimg.com/vi/SqO_-olNvnU/maxresdefault.jpg",
-      "enrolled": [],
+      "enrolled": [
+        {
+          "name": "Mikhail"
+        }
+      ],
       "id": 3
     }
   ]

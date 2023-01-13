@@ -6,12 +6,20 @@ export class Course{
      * @param quantityClasses - type: int - The number of classes that the course has.
      * @param imageCourse - type: string - The url of course reference image.
      */
-    constructor(name, teacher, quantityClasses, imageCourse){
+    constructor(id, name, teacher, quantityClasses, imageCourse, enrolled){
+        this.id = id
         this.name = name,
         this.teacher = teacher,
         this.quantityClasses = quantityClasses,
-        this.imageCourse = imageCourse
-        this.enrolled = []
+        this.imageCourse = imageCourse,
+        this.enrolled = enrolled
+    }
+    // id
+    getId(){
+        return this.id;
+    }
+    setId(id){
+        this.id = id;
     }
     //name
     getName(){
@@ -34,6 +42,13 @@ export class Course{
     setQuantityClasses(number){
         this.getQuantityClasses = number;
     }
+    //quantityClasses
+    getImageCourse(){
+        return this.imageCourse;
+    }
+    setImageCourse(newImage){
+        this.imageCourse = newImage;
+    }
     //enrolled
     getEnrolled(){
         return this.enrolled;
@@ -44,6 +59,15 @@ export class Course{
     */
     setEnrolled(student){
         this.enrolled.push(student);
+    }
+    EnrollStudent(){
+        axios({
+            method: 'patch',
+            url: `http://localhost:3000/Courses/${this.id}`,
+            data: {
+                    enrolled: this.enrolled
+                }
+        })
     }
     SaveCourse(){
         axios({
