@@ -52,8 +52,8 @@
     height: calc(100vh - 3.5em);
     padding-top: 3em;
 }
-@media (min-width:1024px) {
+/* @media (min-width:1024px) {
     .app{
         font-size: 25px;
     }
-}
+} */

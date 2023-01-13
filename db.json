@@ -19,6 +19,16 @@
       "statusCount": "isLooged",
       "password": "123",
       "id": 2
+    },
+    {
+      "name": "Mikhail",
+      "lastName": "Salas",
+      "email": "msg@gmail",
+      "userName": "m2sg",
+      "tag": "student",
+      "statusCount": "isLooged",
+      "password": "123",
+      "id": 3
     }
   ],
   "Courses": [
@@ -36,6 +46,14 @@
       "imageCourse": "https://oregoom.com/wp-content/uploads/2020/05/go.jpg",
       "enrolled": [],
       "id": 2
+    },
+    {
+      "name": "Figma para FrontEnd",
+      "teacher": "Denilson",
+      "classes": "15",
+      "imageCourse": "https://i.ytimg.com/vi/SqO_-olNvnU/maxresdefault.jpg",
+      "enrolled": [],
+      "id": 3
     }
   ]
 }

@@ -85,9 +85,9 @@
     }
 }
 @media (min-width: 1024px) {
-    .overScreen{
+    /* .overScreen{
         font-size: 25px;
-    }
+    } */
     .courseDetail-container{
         align-items: flex-start;
     }

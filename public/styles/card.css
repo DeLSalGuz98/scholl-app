@@ -28,7 +28,7 @@
 }
 @media (min-width:1024px) {
     .card{
-        font-size: 20px;
+        /* font-size: 20px; */
         margin-left: 2em;
     }
 }

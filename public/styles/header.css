@@ -41,9 +41,9 @@ li{
     }
 }
 @media (min-width:1024px){
-    .header{
+    /* .header{
         font-size: 25px;
-    }
+    } */
     .nav{
         width: 15em;
     }

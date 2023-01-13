@@ -113,6 +113,6 @@ function CreateCardCourse() {
 signOut.addEventListener('click', (e)=>{
     e.preventDefault();
     localStorage.setItem('statusCount', 'isUnlogged');
-    localStorage.removeItem(idUser);
+    localStorage.removeItem('idUser');
     location.reload();
 });

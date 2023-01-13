@@ -7,6 +7,7 @@
     <title>School | teacher</title>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -22,7 +23,7 @@
         <div class="container">
             <div class="profile">
                 <div class="user">
-                    <img class="user-img" src="/assets/teacher.jpg" alt="foto-teacher">
+                    <img class="user-img" src="./assets/teacher.jpg" alt="foto-teacher">
                     <p class="user-name text-white">Denilson Salas</p>
                 </div>
                 <input class="btn btn-blue" type="button" value="Get Premium Count">
@@ -38,12 +39,12 @@
                     </div>
                 </div>
             </div>
-            <div class="overScreen">
+            <div class="remove">
                 <div class="courseDetail radius-10">
                     <a class="close" href="#"><i class="fa-solid fa-xmark"></i></a>
                     <div class="courseDetail-container">
                         <div class="courseDetail-one">
-                            <img class="courseDetail-img" src="/assets/html.png" alt="course-foto">
+                            <img class="courseDetail-img" src="./assets/html.png" alt="course-foto">
                             <p class="courseDetail-name">Html</p>
                             <div class="courseDetail-text">
                                 <p>Clases: 10</p>
@@ -65,6 +66,6 @@
             </div>
         </div>
     </div>
-    <script type="module" src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/studentPage.js"></script>
 </body>
 </html>

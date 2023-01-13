@@ -51,9 +51,8 @@ function NewUser(typeUser, name, lastName, email, userName, password) {
         const newTeacher = new Teacher(dataUser)
         newTeacher.SaveTeacher();
     }else{
-        const newStudent = new Student(name, lastName, email, userName)
+        const newStudent = new Student(dataUser)
         newStudent.SaveStudent();
-        location.href = 'http://127.0.0.1:5500/public/signin.html';
     }
 }
 

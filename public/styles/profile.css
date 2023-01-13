@@ -32,7 +32,7 @@
 
 @media (min-width:1024px){
     .container{
-        font-size: 25px;
+        /* font-size: 25px; */
         flex-direction: row;
     }
     .profile{

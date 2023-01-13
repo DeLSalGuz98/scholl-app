@@ -35,7 +35,7 @@
 }
 @media (min-width:1024px){
     .form{
-        font-size: 25px;
+        /* font-size: 25px; */
         width: 25%;
     }
 }
