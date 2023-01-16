@@ -47,7 +47,7 @@ function getDataUser(idUser) {
 }
 
 function setDataUser(user) {
-    emailUser.innerHTML = `<i class="fa-solid fa-chalkboard-user"></i> ${user.getEmail()}`
+    emailUser.innerHTML = `<i class="fa-solid fa-graduation-cap"></i> ${user.getEmail()}`
     nameUser.innerHTML = `${user.getName()} ${user.getLastName()}`
 }
 
@@ -118,7 +118,12 @@ function showDetails(idCourse) {
                         <p>Enrolled List</p>
                         <ul class="enrolled-list">
                         ${
+                            e.enrolled.length <= 0? `
+                            <li class="enrolled-item radius-5">There aren't enrolled yet</i>
+                            </li> 
+                            `: 
                             e.enrolled.map(e=>{
+                                console.log(e)
                                 return`
                                     <li class="enrolled-item radius-5">${e.name}<i class="fa-solid fa-graduation-cap"></i>
                                     </li> 

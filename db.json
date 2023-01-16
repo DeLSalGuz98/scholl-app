@@ -1,6 +1,54 @@
 {
   "Users": [
+    {
+      "name": "Pedro",
+      "lastName": "Montañas",
+      "email": "pmonta@gmail",
+      "userName": "pmontaña",
+      "tag": "teacher",
+      "statusCount": "isLooged",
+      "password": "67890",
+      "id": 1
+    },
+    {
+      "name": "Juan",
+      "lastName": "Villafuerte",
+      "email": "juanito@gmail",
+      "userName": "juanito",
+      "tag": "student",
+      "statusCount": "isLooged",
+      "password": "67890",
+      "id": 2
+    }
   ],
   "Courses": [
+    {
+      "name": "Node JS",
+      "teacher": "Pedro",
+      "classes": "16",
+      "imageCourse": "https://jornadadodev.com.br/sites/default/files/cursos/curso-nodejs.jpg",
+      "enrolled": [
+        {
+          "name": "Juan"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "PHP",
+      "teacher": "Pedro",
+      "classes": "12",
+      "imageCourse": "https://blog.facialix.com/wp-content/uploads/2021/03/php-curso-facialix-2.jpg",
+      "enrolled": [],
+      "id": 2
+    },
+    {
+      "name": "Go",
+      "teacher": "Pedro",
+      "classes": "19",
+      "imageCourse": "https://blog.facialix.com/wp-content/uploads/2022/05/scontent-qro1-2_xx_fbcdn_net-189343640_1602705246786135_7437486992696599292_n.jpg",
+      "enrolled": [],
+      "id": 3
+    }
   ]
 }
