@@ -6,6 +6,13 @@ Esta es un aplicación escolar en la cual se pueden registrar profesores y estud
 
 > Nota: esta es una aplicación de práctica, la intecion fue practicar los conceptos del paradicma POO (programacion orientado a objetos), tambien se hizo uso de "json-server" para simular un bakend. esta es la primera version de la app, aun hay varios errores que seran solucionados en una segunda version. pero por el momento funciona 😁
 
+## Herramientas
+1. html
+2. css
+3. javascript
+4. axios
+5. json-server
+
 ## Capturas de Pantalla
 
 **Registro**
